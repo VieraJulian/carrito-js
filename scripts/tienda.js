@@ -1,8 +1,14 @@
-const cartButtons = document.querySelectorAll(".addToCart");
+document.addEventListener("click", event => {
+    if (event.target && event.target.className.includes("addToCart")) {
+        cartClicked(event);
+    }
+})
+
+/* const cartButtons = document.querySelectorAll(".addToCart");
 
 cartButtons.forEach(button => {
     button.addEventListener("click", cartClicked);
-});
+}); */
 
 const comprarButton = document.querySelector(".comprarButton");
 comprarButton.addEventListener("click", comprarButtonClicked);
